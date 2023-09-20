@@ -63,10 +63,12 @@ class PokerSimulator {
             List handSet = playerHand.toSet().toList()
             deck.removeAll(handSet)
 
-            Collections.shuffle(deck)
 
+            Collections.shuffle(deck)
             List<Map> opponentHand = deck[0..1]
+            deck.removeAll(opponentHand)
             List<Map> tableCards = deck[2..6]
+
 
             def playerBestHand = evaluateBestHand(playerHand + tableCards)
             def opponentBestHand = evaluateBestHand(opponentHand + tableCards)
