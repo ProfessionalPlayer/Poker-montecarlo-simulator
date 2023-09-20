@@ -86,7 +86,7 @@ class PokerSimulator {
     }
 
     def static createDeck() {
-        def suits = ['hearts', 'diamonds', 'clubs', 'spades']
+        def suits = ['hcearts', 'diamonds', 'clubs', 'spades']
         def ranks = (2..10).toList() + ['J', 'Q', 'K', 'A']
         return [suits, ranks].combinations().collect { suit, rank -> [suit: suit, rank: rank] }
     }
